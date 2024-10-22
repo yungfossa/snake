@@ -1,0 +1,416 @@
+\doxysection{include/graphics.h File Reference}
+\hypertarget{graphics_8h}{}\label{graphics_8h}\index{include/graphics.h@{include/graphics.h}}
+
+
+Declarations for functions related to graphics and user interface.  
+
+
+{\ttfamily \#include "{}moves\+\_\+list.\+h"{}}\newline
+{\ttfamily \#include "{}entities.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{graphics_8h_afd173920825bb23373edb8473ddcc0dd}{ww}}~"{}🆆 "{}
+\begin{DoxyCompactList}\small\item\em Represents the \textquotesingle{}w\textquotesingle{} movement option in the game menu. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a34961a046133dbbf9e99f7077377a262}{aa}}~"{}🅰 "{}
+\begin{DoxyCompactList}\small\item\em Represents the \textquotesingle{}a\textquotesingle{} movement option in the game menu. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a74d3c3c85d450f9238a162d015c0b407}{ss}}~"{}🆂 "{}
+\begin{DoxyCompactList}\small\item\em Represents the \textquotesingle{}s\textquotesingle{} movement option in the game menu. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_ad00e18ad511504c9caeaf5638622f9aa}{dd}}~"{}🅳 "{}
+\begin{DoxyCompactList}\small\item\em Represents the \textquotesingle{}d\textquotesingle{} movement option in the game menu. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_acbc47fe98e9338fae8a61ce6fe007ec4}{ee}}~"{}🅴 "{}
+\begin{DoxyCompactList}\small\item\em Represents the \textquotesingle{}e\textquotesingle{} action option in the game menu. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a2700c89c895f9f8bd963db6f655eb3e7}{uu}}~"{}🆄 "{}
+\begin{DoxyCompactList}\small\item\em Represents the \textquotesingle{}u\textquotesingle{} action option in the game menu. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}}~"{}\textbackslash{}e\mbox{[}0;31m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for red color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_aea69ffbacdcdf16c21b8c9961df84448}{GRN}}~"{}\textbackslash{}e\mbox{[}0;32m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for green color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a96fac03c4ab3363f06a0328e0e53a40c}{YEL}}~"{}\textbackslash{}e\mbox{[}0;33m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for yellow color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_af54a5a977c0c499323d656315f008ee0}{MAG}}~"{}\textbackslash{}e\mbox{[}0;35m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for magenta color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_adc708fa688f5d78db361f66c36f0f807}{CYN}}~"{}\textbackslash{}e\mbox{[}0;36m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for cyan color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a2adb4c9e293ac446897ccfac5a52d6c2}{BRED}}~"{}\textbackslash{}e\mbox{[}1;31m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for bold red color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_af1bdc3f8928aa1589ef44e3578a09464}{BMAG}}~"{}\textbackslash{}e\mbox{[}1;35m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for bold magenta color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_abd610b309fe5845f1e5fbd6666a22447}{BCYN}}~"{}\textbackslash{}e\mbox{[}1;36m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code for bold cyan color in terminal output. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{graphics_8h_a4479070f1574923d7f48e0d59ddccf34}{CRESET}}~"{}\textbackslash{}e\mbox{[}0m"{}
+\begin{DoxyCompactList}\small\item\em Defines the ANSI escape code to reset color formatting in terminal output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphics_8h_a20f91c866557ae6af943885b0a466f91}{display\+\_\+title}} ()
+\begin{DoxyCompactList}\small\item\em Displays the title of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a62c8a44c1261279e01a1b2afdb22b57c}{display\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Displays the main menu options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_af7734d14a5ed7b660b7343ab8cde3e40}{display\+\_\+maze\+\_\+and\+\_\+entities}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Displays the maze layout and game entities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a1abfe21d9bf268190a37d7a1d71635b1}{display\+\_\+interactive\+\_\+mode\+\_\+final\+\_\+score}} (int score)
+\begin{DoxyCompactList}\small\item\em Displays the final score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_adc2293dbdd9c5734400dfe672f6b11be}{display\+\_\+interactive\+\_\+mode\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Displays instructions for interactive mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_aa6d1ab876279e486c652883a09c77b47}{display\+\_\+ai\+\_\+solution\+\_\+road}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Displays the maze layout including a dotted road, which is the solution found by the AI to reach the end of the labyrinth\+: it also displays the \doxylink{structSnake}{Snake}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a6e73cc46021259087d9170ee51ee8ee5}{display\+\_\+ai\+\_\+moves\+\_\+and\+\_\+score}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Displays the moves done by the AI to reach the end of the labyrinth and the final score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a37fdef58f7a9d50285415646a23eb6e6}{display\+\_\+ai\+\_\+mode\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Displays instructions for AI mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_aa4ba8c6fce4deaa5166d826c72ebbee4}{display\+\_\+play\+\_\+again}} ()
+\begin{DoxyCompactList}\small\item\em Displays the option to play again. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ad39792bb87b41437a35711d15a9661b7}{display\+\_\+maze\+\_\+tile}} (char tile)
+\begin{DoxyCompactList}\small\item\em Displays a tile of the maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ae1600cd97b24d3aae11128b55a440b57}{display\+\_\+message}} (char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Displays a message in the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}{clear\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Clears the terminal screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a1dd37dbd4b8eccf381ba13b1360804f3}{enable\+\_\+input\+\_\+hiding}} ()
+\begin{DoxyCompactList}\small\item\em Enables hiding user input in the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_aeece04671952b4732dbfd929b859de68}{disable\+\_\+input\+\_\+hiding}} ()
+\begin{DoxyCompactList}\small\item\em Disables hiding user input in the terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declarations for functions related to graphics and user interface. 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{graphics_8h_a34961a046133dbbf9e99f7077377a262}\label{graphics_8h_a34961a046133dbbf9e99f7077377a262} 
+\index{graphics.h@{graphics.h}!aa@{aa}}
+\index{aa@{aa}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{aa}{aa}}
+{\footnotesize\ttfamily \#define aa~"{}🅰 "{}}
+
+
+
+Represents the \textquotesingle{}a\textquotesingle{} movement option in the game menu. 
+
+\Hypertarget{graphics_8h_abd610b309fe5845f1e5fbd6666a22447}\label{graphics_8h_abd610b309fe5845f1e5fbd6666a22447} 
+\index{graphics.h@{graphics.h}!BCYN@{BCYN}}
+\index{BCYN@{BCYN}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{BCYN}{BCYN}}
+{\footnotesize\ttfamily \#define BCYN~"{}\textbackslash{}e\mbox{[}1;36m"{}}
+
+
+
+Defines the ANSI escape code for bold cyan color in terminal output. 
+
+\Hypertarget{graphics_8h_af1bdc3f8928aa1589ef44e3578a09464}\label{graphics_8h_af1bdc3f8928aa1589ef44e3578a09464} 
+\index{graphics.h@{graphics.h}!BMAG@{BMAG}}
+\index{BMAG@{BMAG}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{BMAG}{BMAG}}
+{\footnotesize\ttfamily \#define BMAG~"{}\textbackslash{}e\mbox{[}1;35m"{}}
+
+
+
+Defines the ANSI escape code for bold magenta color in terminal output. 
+
+\Hypertarget{graphics_8h_a2adb4c9e293ac446897ccfac5a52d6c2}\label{graphics_8h_a2adb4c9e293ac446897ccfac5a52d6c2} 
+\index{graphics.h@{graphics.h}!BRED@{BRED}}
+\index{BRED@{BRED}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{BRED}{BRED}}
+{\footnotesize\ttfamily \#define BRED~"{}\textbackslash{}e\mbox{[}1;31m"{}}
+
+
+
+Defines the ANSI escape code for bold red color in terminal output. 
+
+\Hypertarget{graphics_8h_a4479070f1574923d7f48e0d59ddccf34}\label{graphics_8h_a4479070f1574923d7f48e0d59ddccf34} 
+\index{graphics.h@{graphics.h}!CRESET@{CRESET}}
+\index{CRESET@{CRESET}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{CRESET}{CRESET}}
+{\footnotesize\ttfamily \#define CRESET~"{}\textbackslash{}e\mbox{[}0m"{}}
+
+
+
+Defines the ANSI escape code to reset color formatting in terminal output. 
+
+\Hypertarget{graphics_8h_adc708fa688f5d78db361f66c36f0f807}\label{graphics_8h_adc708fa688f5d78db361f66c36f0f807} 
+\index{graphics.h@{graphics.h}!CYN@{CYN}}
+\index{CYN@{CYN}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{CYN}{CYN}}
+{\footnotesize\ttfamily \#define CYN~"{}\textbackslash{}e\mbox{[}0;36m"{}}
+
+
+
+Defines the ANSI escape code for cyan color in terminal output. 
+
+\Hypertarget{graphics_8h_ad00e18ad511504c9caeaf5638622f9aa}\label{graphics_8h_ad00e18ad511504c9caeaf5638622f9aa} 
+\index{graphics.h@{graphics.h}!dd@{dd}}
+\index{dd@{dd}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{dd}{dd}}
+{\footnotesize\ttfamily \#define dd~"{}🅳 "{}}
+
+
+
+Represents the \textquotesingle{}d\textquotesingle{} movement option in the game menu. 
+
+\Hypertarget{graphics_8h_acbc47fe98e9338fae8a61ce6fe007ec4}\label{graphics_8h_acbc47fe98e9338fae8a61ce6fe007ec4} 
+\index{graphics.h@{graphics.h}!ee@{ee}}
+\index{ee@{ee}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{ee}{ee}}
+{\footnotesize\ttfamily \#define ee~"{}🅴 "{}}
+
+
+
+Represents the \textquotesingle{}e\textquotesingle{} action option in the game menu. 
+
+\Hypertarget{graphics_8h_aea69ffbacdcdf16c21b8c9961df84448}\label{graphics_8h_aea69ffbacdcdf16c21b8c9961df84448} 
+\index{graphics.h@{graphics.h}!GRN@{GRN}}
+\index{GRN@{GRN}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{GRN}{GRN}}
+{\footnotesize\ttfamily \#define GRN~"{}\textbackslash{}e\mbox{[}0;32m"{}}
+
+
+
+Defines the ANSI escape code for green color in terminal output. 
+
+\Hypertarget{graphics_8h_af54a5a977c0c499323d656315f008ee0}\label{graphics_8h_af54a5a977c0c499323d656315f008ee0} 
+\index{graphics.h@{graphics.h}!MAG@{MAG}}
+\index{MAG@{MAG}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{MAG}{MAG}}
+{\footnotesize\ttfamily \#define MAG~"{}\textbackslash{}e\mbox{[}0;35m"{}}
+
+
+
+Defines the ANSI escape code for magenta color in terminal output. 
+
+\Hypertarget{graphics_8h_a8d23feea868a983c8c2b661e1e16972f}\label{graphics_8h_a8d23feea868a983c8c2b661e1e16972f} 
+\index{graphics.h@{graphics.h}!RED@{RED}}
+\index{RED@{RED}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily \#define RED~"{}\textbackslash{}e\mbox{[}0;31m"{}}
+
+
+
+Defines the ANSI escape code for red color in terminal output. 
+
+\Hypertarget{graphics_8h_a74d3c3c85d450f9238a162d015c0b407}\label{graphics_8h_a74d3c3c85d450f9238a162d015c0b407} 
+\index{graphics.h@{graphics.h}!ss@{ss}}
+\index{ss@{ss}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{ss}{ss}}
+{\footnotesize\ttfamily \#define ss~"{}🆂 "{}}
+
+
+
+Represents the \textquotesingle{}s\textquotesingle{} movement option in the game menu. 
+
+\Hypertarget{graphics_8h_a2700c89c895f9f8bd963db6f655eb3e7}\label{graphics_8h_a2700c89c895f9f8bd963db6f655eb3e7} 
+\index{graphics.h@{graphics.h}!uu@{uu}}
+\index{uu@{uu}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{uu}{uu}}
+{\footnotesize\ttfamily \#define uu~"{}🆄 "{}}
+
+
+
+Represents the \textquotesingle{}u\textquotesingle{} action option in the game menu. 
+
+\Hypertarget{graphics_8h_afd173920825bb23373edb8473ddcc0dd}\label{graphics_8h_afd173920825bb23373edb8473ddcc0dd} 
+\index{graphics.h@{graphics.h}!ww@{ww}}
+\index{ww@{ww}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{ww}{ww}}
+{\footnotesize\ttfamily \#define ww~"{}🆆 "{}}
+
+
+
+Represents the \textquotesingle{}w\textquotesingle{} movement option in the game menu. 
+
+\Hypertarget{graphics_8h_a96fac03c4ab3363f06a0328e0e53a40c}\label{graphics_8h_a96fac03c4ab3363f06a0328e0e53a40c} 
+\index{graphics.h@{graphics.h}!YEL@{YEL}}
+\index{YEL@{YEL}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{YEL}{YEL}}
+{\footnotesize\ttfamily \#define YEL~"{}\textbackslash{}e\mbox{[}0;33m"{}}
+
+
+
+Defines the ANSI escape code for yellow color in terminal output. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}\label{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a} 
+\index{graphics.h@{graphics.h}!clear\_screen@{clear\_screen}}
+\index{clear\_screen@{clear\_screen}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{clear\_screen()}{clear\_screen()}}
+{\footnotesize\ttfamily void clear\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the terminal screen. 
+
+\Hypertarget{graphics_8h_aeece04671952b4732dbfd929b859de68}\label{graphics_8h_aeece04671952b4732dbfd929b859de68} 
+\index{graphics.h@{graphics.h}!disable\_input\_hiding@{disable\_input\_hiding}}
+\index{disable\_input\_hiding@{disable\_input\_hiding}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{disable\_input\_hiding()}{disable\_input\_hiding()}}
+{\footnotesize\ttfamily void disable\+\_\+input\+\_\+hiding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables hiding user input in the terminal. 
+
+\Hypertarget{graphics_8h_a37fdef58f7a9d50285415646a23eb6e6}\label{graphics_8h_a37fdef58f7a9d50285415646a23eb6e6} 
+\index{graphics.h@{graphics.h}!display\_ai\_mode\_instructions@{display\_ai\_mode\_instructions}}
+\index{display\_ai\_mode\_instructions@{display\_ai\_mode\_instructions}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_ai\_mode\_instructions()}{display\_ai\_mode\_instructions()}}
+{\footnotesize\ttfamily void display\+\_\+ai\+\_\+mode\+\_\+instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays instructions for AI mode. 
+
+\Hypertarget{graphics_8h_a6e73cc46021259087d9170ee51ee8ee5}\label{graphics_8h_a6e73cc46021259087d9170ee51ee8ee5} 
+\index{graphics.h@{graphics.h}!display\_ai\_moves\_and\_score@{display\_ai\_moves\_and\_score}}
+\index{display\_ai\_moves\_and\_score@{display\_ai\_moves\_and\_score}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_ai\_moves\_and\_score()}{display\_ai\_moves\_and\_score()}}
+{\footnotesize\ttfamily void display\+\_\+ai\+\_\+moves\+\_\+and\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+
+
+Displays the moves done by the AI to reach the end of the labyrinth and the final score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a \doxylink{structMovesList}{Moves\+List} which contains all the moves done by the AI mode. \\
+\hline
+{\em s} & A pointer to the \doxylink{structSnakeEntity}{Snake\+Entity} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8h_aa6d1ab876279e486c652883a09c77b47}\label{graphics_8h_aa6d1ab876279e486c652883a09c77b47} 
+\index{graphics.h@{graphics.h}!display\_ai\_solution\_road@{display\_ai\_solution\_road}}
+\index{display\_ai\_solution\_road@{display\_ai\_solution\_road}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_ai\_solution\_road()}{display\_ai\_solution\_road()}}
+{\footnotesize\ttfamily void display\+\_\+ai\+\_\+solution\+\_\+road (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s,  }\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Displays the maze layout including a dotted road, which is the solution found by the AI to reach the end of the labyrinth\+: it also displays the \doxylink{structSnake}{Snake}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A pointer to the \doxylink{structMaze}{Maze} struct \\
+\hline
+{\em s} & A pointer to the \doxylink{structSnake}{Snake} struct \\
+\hline
+{\em l} & A pointer to a \doxylink{structPointsList}{Points\+List} which contains all the Points crossed by the AI. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8h_a1abfe21d9bf268190a37d7a1d71635b1}\label{graphics_8h_a1abfe21d9bf268190a37d7a1d71635b1} 
+\index{graphics.h@{graphics.h}!display\_interactive\_mode\_final\_score@{display\_interactive\_mode\_final\_score}}
+\index{display\_interactive\_mode\_final\_score@{display\_interactive\_mode\_final\_score}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_interactive\_mode\_final\_score()}{display\_interactive\_mode\_final\_score()}}
+{\footnotesize\ttfamily void display\+\_\+interactive\+\_\+mode\+\_\+final\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Displays the final score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The final score of the game. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8h_adc2293dbdd9c5734400dfe672f6b11be}\label{graphics_8h_adc2293dbdd9c5734400dfe672f6b11be} 
+\index{graphics.h@{graphics.h}!display\_interactive\_mode\_instructions@{display\_interactive\_mode\_instructions}}
+\index{display\_interactive\_mode\_instructions@{display\_interactive\_mode\_instructions}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_interactive\_mode\_instructions()}{display\_interactive\_mode\_instructions()}}
+{\footnotesize\ttfamily void display\+\_\+interactive\+\_\+mode\+\_\+instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays instructions for interactive mode. 
+
+\Hypertarget{graphics_8h_a62c8a44c1261279e01a1b2afdb22b57c}\label{graphics_8h_a62c8a44c1261279e01a1b2afdb22b57c} 
+\index{graphics.h@{graphics.h}!display\_main\_menu@{display\_main\_menu}}
+\index{display\_main\_menu@{display\_main\_menu}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_main\_menu()}{display\_main\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the main menu options. 
+
+\Hypertarget{graphics_8h_af7734d14a5ed7b660b7343ab8cde3e40}\label{graphics_8h_af7734d14a5ed7b660b7343ab8cde3e40} 
+\index{graphics.h@{graphics.h}!display\_maze\_and\_entities@{display\_maze\_and\_entities}}
+\index{display\_maze\_and\_entities@{display\_maze\_and\_entities}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_maze\_and\_entities()}{display\_maze\_and\_entities()}}
+{\footnotesize\ttfamily void display\+\_\+maze\+\_\+and\+\_\+entities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}}]{e }\end{DoxyParamCaption})}
+
+
+
+Displays the maze layout and game entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A pointer to the \doxylink{structMaze}{Maze} struct. \\
+\hline
+{\em e} & A pointer to the \doxylink{structEntities}{Entities} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8h_ad39792bb87b41437a35711d15a9661b7}\label{graphics_8h_ad39792bb87b41437a35711d15a9661b7} 
+\index{graphics.h@{graphics.h}!display\_maze\_tile@{display\_maze\_tile}}
+\index{display\_maze\_tile@{display\_maze\_tile}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_maze\_tile()}{display\_maze\_tile()}}
+{\footnotesize\ttfamily void display\+\_\+maze\+\_\+tile (\begin{DoxyParamCaption}\item[{char}]{tile }\end{DoxyParamCaption})}
+
+
+
+Displays a tile of the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & The character representing the tile. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8h_ae1600cd97b24d3aae11128b55a440b57}\label{graphics_8h_ae1600cd97b24d3aae11128b55a440b57} 
+\index{graphics.h@{graphics.h}!display\_message@{display\_message}}
+\index{display\_message@{display\_message}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_message()}{display\_message()}}
+{\footnotesize\ttfamily void display\+\_\+message (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Displays a message in the terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be displayed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8h_aa4ba8c6fce4deaa5166d826c72ebbee4}\label{graphics_8h_aa4ba8c6fce4deaa5166d826c72ebbee4} 
+\index{graphics.h@{graphics.h}!display\_play\_again@{display\_play\_again}}
+\index{display\_play\_again@{display\_play\_again}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_play\_again()}{display\_play\_again()}}
+{\footnotesize\ttfamily void display\+\_\+play\+\_\+again (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the option to play again. 
+
+\Hypertarget{graphics_8h_a20f91c866557ae6af943885b0a466f91}\label{graphics_8h_a20f91c866557ae6af943885b0a466f91} 
+\index{graphics.h@{graphics.h}!display\_title@{display\_title}}
+\index{display\_title@{display\_title}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{display\_title()}{display\_title()}}
+{\footnotesize\ttfamily void display\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the title of the game. 
+
+\Hypertarget{graphics_8h_a1dd37dbd4b8eccf381ba13b1360804f3}\label{graphics_8h_a1dd37dbd4b8eccf381ba13b1360804f3} 
+\index{graphics.h@{graphics.h}!enable\_input\_hiding@{enable\_input\_hiding}}
+\index{enable\_input\_hiding@{enable\_input\_hiding}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{enable\_input\_hiding()}{enable\_input\_hiding()}}
+{\footnotesize\ttfamily void enable\+\_\+input\+\_\+hiding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables hiding user input in the terminal. 
+

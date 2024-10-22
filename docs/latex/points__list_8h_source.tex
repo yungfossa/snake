@@ -1,0 +1,66 @@
+\doxysection{points\+\_\+list.\+h}
+\hypertarget{points__list_8h_source}{}\label{points__list_8h_source}\index{include/points\_list.h@{include/points\_list.h}}
+\mbox{\hyperlink{points__list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_POINTS\_LIST\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SNAKE\_POINTS\_LIST\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPoint}{Point}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPoint_a8c779e11e694b20e0946105a9f5de842}{x}};\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPoint_a2e1b5fb2b2a83571f5c0bc0f66a73cf7}{y}};\ \ \ \ \ }
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{structPoint}{Point}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{structPoint}{Point}}\ \mbox{\hyperlink{points__list_8h_a5e005b5124ae2cf7487b52958ace9026}{create\_point}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{points__list_8h_a97304a3416a84937bbf347b7a06abf7c}{equal}}(\mbox{\hyperlink{structPoint}{Point}}\ p1,\ \mbox{\hyperlink{structPoint}{Point}}\ p2);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPointCell}{PointCell}}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structPoint}{Point}}\ \mbox{\hyperlink{structPointCell_a4477ea41dea0c0f587c67682c67304bb}{info}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPointCell}{PointCell}}\ *\mbox{\hyperlink{structPointCell_a90c4723e4f30905e5e6ff3b8432bf14d}{next}};\ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPointCell}{PointCell}}\ *\mbox{\hyperlink{structPointCell_aec3de464340ddbed86f29a013e0c69e6}{prev}};\ \ \ \ }
+\DoxyCodeLine{00049\ \}\ \mbox{\hyperlink{structPointCell}{PointCell}};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPointCell}{PointCell}}\ *PPointCell;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structPointsList}{PointsList}}\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ PPointCell\ \mbox{\hyperlink{structPointsList_aa5e216047b1c3f106ffe7104064e642e}{head}};\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ PPointCell\ \mbox{\hyperlink{structPointsList_ab5bd4995d93f67beb333b5f4fa0835c5}{tail}};\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ PPointCell\ \mbox{\hyperlink{structPointsList_add0eff5c64527fd60bf6984dfcbb873d}{target}};\ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structPointsList_ac806beb82672400d6a906dc4c94255d5}{size}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \}\ \mbox{\hyperlink{structPointsList}{PointsList}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structPointsList}{PointsList}}\ *\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPointsList}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a9ecbb127ecfa3cce6ed0be11b0ba47cf}{init\_points\_list}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \mbox{\hyperlink{structPointsList}{PPointsList}}\ \mbox{\hyperlink{points__list_8h_af588d0a1d536ab86d8177138c8016cbc}{create\_points\_list}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{points__list_8h_a348ab5adab42d4ab3c6e907bb199a11d}{is\_points\_list\_empty}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a662c4c7ae88422732227cf3d4387ff27}{push\_front\_point}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l,\ \mbox{\hyperlink{structPoint}{Point}}\ p);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a0dfc605e252a895110a5b9fe3a58020c}{push\_back\_point}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l,\ \mbox{\hyperlink{structPoint}{Point}}\ p);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a0cd684002e7302fe4238ad73dcb1af06}{pop\_back}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_adcf2b350aaa9f46bdaf4bd01734fedad}{destroy\_points\_list}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \mbox{\hyperlink{structPoint}{Point}}\ \mbox{\hyperlink{points__list_8h_ab609ed8cd24363f28b3a60514e20ed3b}{get\_points\_list\_head}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{points__list_8h_a342fd91e049c721c1e5defabd87b91e4}{contains}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l,\ \mbox{\hyperlink{structPoint}{Point}}\ p);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a1422cc4294588ea7d186b5255ffed677}{halve\_points\_list}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a9adb28f3434df971dfa7b33fa6a3fc8e}{adjust\_cells}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l,\ \mbox{\hyperlink{structPoint}{Point}}\ p);\ \textcolor{comment}{//TODO\ commentare\ meglio\ questa}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00151\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{points__list_8h_a28fe52b62d9b21920cd7167d0062b4f6}{remove\_cells\_after\_target}}(\mbox{\hyperlink{structPointsList}{PPointsList}}\ *l,\ \mbox{\hyperlink{structPoint}{Point}}\ p\_target);}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

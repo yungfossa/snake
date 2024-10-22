@@ -1,0 +1,43 @@
+\doxysection{entities.\+h}
+\hypertarget{entities_8h_source}{}\label{entities_8h_source}\index{include/entities.h@{include/entities.h}}
+\mbox{\hyperlink{entities_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_ENTITIES\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SNAKE\_ENTITIES\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{points__list_8h}{points\_list.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSnakeEntity}{SnakeEntity}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSnake_ae5b13aadb0092ce8c45e04de9024444f}{score}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSnake_afec3656cd53af47b9b7866d63ce76b9c}{grabbed\_coins}};\ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{structPointsList}{PPointsList}}\ \mbox{\hyperlink{structSnake_a8aa675fff6fff5f5e927f05c57623bc1}{body}};\ \ \ \ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{structSnake}{Snake}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structDrillEntity}{DrillEntity}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structDrill_a2b52b21bf64aa04f5ef3e41785492400}{active}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structDrill_a5eebf8495e29a94eaf989aefe85c806e}{usages}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \}\ \mbox{\hyperlink{structDrill}{Drill}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structEntities}{Entities}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structSnake}{Snake}}\ \mbox{\hyperlink{structEntities_a0de6d42aa2201ef12067ea55bd85a01b}{snake}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{structDrill}{Drill}}\ \mbox{\hyperlink{structEntities_a562504bcce4e99e7f36f13a9bcab8abd}{drill}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{structEntities}{Entities}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_a50423b72083893c64fdb3a322a78d832}{init\_entities}}(\mbox{\hyperlink{structEntities}{Entities}}\ *e,\ \mbox{\hyperlink{structPoint}{Point}}\ p\_start);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_a8a769a721d61678a16e7a02f2484931b}{entities\_update}}(\mbox{\hyperlink{structEntities}{Entities}}\ **e,\ \textcolor{keywordtype}{char}\ *c);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_a36ba2ad165f9863ee2193c751bb13eae}{snake\_apply\_coin}}(\mbox{\hyperlink{structSnake}{Snake}}\ *s);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_acd9649dd3c9c413eb7b21eb030f538b6}{snake\_apply\_sudden}}(\mbox{\hyperlink{structSnake}{Snake}}\ *s);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_ac9f95b896c027547c02597f7c94ce0dd}{snake\_update}}(\mbox{\hyperlink{structSnake}{Snake}}\ *s,\ \mbox{\hyperlink{structPoint}{Point}}\ new\_head\_pos);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_aa7b663ea8dd83281cfc489ede6b2303c}{drill\_set}}(\mbox{\hyperlink{structDrill}{Drill}}\ *d);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{entities_8h_ac404cba1a625a403eccacb18f91c39ba}{drill\_update}}(\mbox{\hyperlink{structDrill}{Drill}}\ *d);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

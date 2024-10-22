@@ -1,0 +1,295 @@
+\doxysection{src/game.c File Reference}
+\hypertarget{game_8c}{}\label{game_8c}\index{src/game.c@{src/game.c}}
+
+
+Implementation of the game header (\doxylink{game_8h}{game.\+h}).  
+
+
+{\ttfamily \#include "{}../include/points\+\_\+list.\+h"{}}\newline
+{\ttfamily \#include "{}../include/game.\+h"{}}\newline
+{\ttfamily \#include "{}../include/graphics.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGame}{Game}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game_8c_a7dfcdd44df729290e3d0a71bb5463172}{create\+\_\+game}} (\mbox{\hyperlink{structMazeInfo}{Maze\+Info}} info)
+\begin{DoxyCompactList}\small\item\em Creates a new game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_ac27becf9140ef1374ff8acd13d6e6bba}{game\+\_\+entities\+\_\+update}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{structPoint}{Point}} next)
+\begin{DoxyCompactList}\small\item\em Updates game entities based on the next move. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_afdb40819206580ef656f4a1ff10cc4fa}{game\+\_\+status\+\_\+update}} (\mbox{\hyperlink{structGame}{Game}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Updates the game status. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{game_8c_adfb636858010d1340c8d734716abbb89}{get\+\_\+menu\+\_\+choice}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user\textquotesingle{}s menu choice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}} \mbox{\hyperlink{game_8c_a8394954c77403f0f9fc5f1d16edea50c}{select\+\_\+game\+\_\+mode}} (char c)
+\begin{DoxyCompactList}\small\item\em Selects the game mode based on user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_af679cdae0f82be8d2c96b203aa341904}{select\+\_\+who\+\_\+plays}} (\mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}} mode, \mbox{\hyperlink{structMazeInfo}{Maze\+Info}} config)
+\begin{DoxyCompactList}\small\item\em Initiates the game based on the selected mode and maze configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a885611589f6294afada89fe88362e863}{main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Displays the main menu and initiates the game based on user input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{game_8c_a5116ca68ce8084da912814e96b5e23b7}{map\+\_\+move}} (\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} m)
+\begin{DoxyCompactList}\small\item\em Maps a Game\+Move to a \doxylink{structPoint}{Point}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{game_8c_a2f9269189d6da297d96c7535ba4d41b8}{calculate\+\_\+move}} (\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} m, \mbox{\hyperlink{structPoint}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Calculates the next move based on the current move and position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} \mbox{\hyperlink{game_8c_ae79069a015d0e1b48ed63e508f741445}{get\+\_\+next\+\_\+user\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Gets the next move from the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a9e2cdec8913653eaa72d561632ba21cc}{user\+\_\+plays}} (\mbox{\hyperlink{structMazeInfo}{Maze\+Info}} config)
+\begin{DoxyCompactList}\small\item\em Initiates an interactive game session. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} \mbox{\hyperlink{game_8c_ad9ac3dc7c0d76d5661d1b90d55e09430}{ai\+\_\+turns\+\_\+right}} (\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} move)
+\item 
+\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} \mbox{\hyperlink{game_8c_a958893616b2e0b0f3cbcd6c12967ef76}{ai\+\_\+turns\+\_\+left}} (\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} move)
+\item 
+void \mbox{\hyperlink{game_8c_ad25caf86aa70a8f51403727400550ef1}{ai\+\_\+swaps\+\_\+moves}} (\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} nd, \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} \texorpdfstring{$\ast$}{*}pd)
+\item 
+bool \mbox{\hyperlink{game_8c_a2ba26f038a8d2caa1fe94dce6f808d7e}{is\+\_\+maze\+\_\+wall\+\_\+ai}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} move)
+\begin{DoxyCompactList}\small\item\em Checks if a move hits a maze wall. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a996b546fff61d684d00d941532f55ba1}{ai\+\_\+plays}} (\mbox{\hyperlink{structMazeInfo}{Maze\+Info}} config)
+\begin{DoxyCompactList}\small\item\em Initiates an AI-\/driven game session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8c_a91b5576c516ed5ba786d18560d26995a}{destroy\+\_\+game}} (\mbox{\hyperlink{structGame}{Game}} \texorpdfstring{$\ast$}{*}g)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the game header (\doxylink{game_8h}{game.\+h}). 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8c_a996b546fff61d684d00d941532f55ba1}\label{game_8c_a996b546fff61d684d00d941532f55ba1} 
+\index{game.c@{game.c}!ai\_plays@{ai\_plays}}
+\index{ai\_plays@{ai\_plays}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{ai\_plays()}{ai\_plays()}}
+{\footnotesize\ttfamily void ai\+\_\+plays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMazeInfo}{Maze\+Info}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Initiates an AI-\/driven game session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Configuration information for the maze. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8c_ad25caf86aa70a8f51403727400550ef1}\label{game_8c_ad25caf86aa70a8f51403727400550ef1} 
+\index{game.c@{game.c}!ai\_swaps\_moves@{ai\_swaps\_moves}}
+\index{ai\_swaps\_moves@{ai\_swaps\_moves}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{ai\_swaps\_moves()}{ai\_swaps\_moves()}}
+{\footnotesize\ttfamily void ai\+\_\+swaps\+\_\+moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{nd,  }\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} \texorpdfstring{$\ast$}{*}}]{pd }\end{DoxyParamCaption})}
+
+\Hypertarget{game_8c_a958893616b2e0b0f3cbcd6c12967ef76}\label{game_8c_a958893616b2e0b0f3cbcd6c12967ef76} 
+\index{game.c@{game.c}!ai\_turns\_left@{ai\_turns\_left}}
+\index{ai\_turns\_left@{ai\_turns\_left}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{ai\_turns\_left()}{ai\_turns\_left()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} ai\+\_\+turns\+\_\+left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{move }\end{DoxyParamCaption})}
+
+\Hypertarget{game_8c_ad9ac3dc7c0d76d5661d1b90d55e09430}\label{game_8c_ad9ac3dc7c0d76d5661d1b90d55e09430} 
+\index{game.c@{game.c}!ai\_turns\_right@{ai\_turns\_right}}
+\index{ai\_turns\_right@{ai\_turns\_right}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{ai\_turns\_right()}{ai\_turns\_right()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} ai\+\_\+turns\+\_\+right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{move }\end{DoxyParamCaption})}
+
+\Hypertarget{game_8c_a2f9269189d6da297d96c7535ba4d41b8}\label{game_8c_a2f9269189d6da297d96c7535ba4d41b8} 
+\index{game.c@{game.c}!calculate\_move@{calculate\_move}}
+\index{calculate\_move@{calculate\_move}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_move()}{calculate\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPoint}{Point}} calculate\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{move,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Calculates the next move based on the current move and position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The current Game\+Move. \\
+\hline
+{\em p} & The current position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next position. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_a7dfcdd44df729290e3d0a71bb5463172}\label{game_8c_a7dfcdd44df729290e3d0a71bb5463172} 
+\index{game.c@{game.c}!create\_game@{create\_game}}
+\index{create\_game@{create\_game}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{create\_game()}{create\_game()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGame}{Game}} \texorpdfstring{$\ast$}{*} create\+\_\+game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMazeInfo}{Maze\+Info}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Creates a new game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Configuration information for the maze. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{structGame}{Game}. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_a91b5576c516ed5ba786d18560d26995a}\label{game_8c_a91b5576c516ed5ba786d18560d26995a} 
+\index{game.c@{game.c}!destroy\_game@{destroy\_game}}
+\index{destroy\_game@{destroy\_game}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_game()}{destroy\_game()}}
+{\footnotesize\ttfamily void destroy\+\_\+game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} \texorpdfstring{$\ast$}{*}}]{g }\end{DoxyParamCaption})}
+
+\Hypertarget{game_8c_ac27becf9140ef1374ff8acd13d6e6bba}\label{game_8c_ac27becf9140ef1374ff8acd13d6e6bba} 
+\index{game.c@{game.c}!game\_entities\_update@{game\_entities\_update}}
+\index{game\_entities\_update@{game\_entities\_update}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_entities\_update()}{game\_entities\_update()}}
+{\footnotesize\ttfamily void game\+\_\+entities\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}}]{e,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{next }\end{DoxyParamCaption})}
+
+
+
+Updates game entities based on the next move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the \doxylink{structMaze}{Maze} struct. \\
+\hline
+{\em e} & Pointer to the \doxylink{structEntities}{Entities} struct. \\
+\hline
+{\em next} & The next position in the maze. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8c_afdb40819206580ef656f4a1ff10cc4fa}\label{game_8c_afdb40819206580ef656f4a1ff10cc4fa} 
+\index{game.c@{game.c}!game\_status\_update@{game\_status\_update}}
+\index{game\_status\_update@{game\_status\_update}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{game\_status\_update()}{game\_status\_update()}}
+{\footnotesize\ttfamily void game\+\_\+status\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{g }\end{DoxyParamCaption})}
+
+
+
+Updates the game status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Pointer to the \doxylink{structGame}{Game} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8c_adfb636858010d1340c8d734716abbb89}\label{game_8c_adfb636858010d1340c8d734716abbb89} 
+\index{game.c@{game.c}!get\_menu\_choice@{get\_menu\_choice}}
+\index{get\_menu\_choice@{get\_menu\_choice}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{get\_menu\_choice()}{get\_menu\_choice()}}
+{\footnotesize\ttfamily char get\+\_\+menu\+\_\+choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the user\textquotesingle{}s menu choice. 
+
+\begin{DoxyReturn}{Returns}
+The chosen menu option. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_ae79069a015d0e1b48ed63e508f741445}\label{game_8c_ae79069a015d0e1b48ed63e508f741445} 
+\index{game.c@{game.c}!get\_next\_user\_move@{get\_next\_user\_move}}
+\index{get\_next\_user\_move@{get\_next\_user\_move}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{get\_next\_user\_move()}{get\_next\_user\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} get\+\_\+next\+\_\+user\+\_\+move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the next move from the user. 
+
+\begin{DoxyReturn}{Returns}
+The chosen Game\+Move. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_a2ba26f038a8d2caa1fe94dce6f808d7e}\label{game_8c_a2ba26f038a8d2caa1fe94dce6f808d7e} 
+\index{game.c@{game.c}!is\_maze\_wall\_ai@{is\_maze\_wall\_ai}}
+\index{is\_maze\_wall\_ai@{is\_maze\_wall\_ai}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{is\_maze\_wall\_ai()}{is\_maze\_wall\_ai()}}
+{\footnotesize\ttfamily bool is\+\_\+maze\+\_\+wall\+\_\+ai (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s,  }\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Checks if a move hits a maze wall. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Pointer to the \doxylink{structMaze}{Maze} struct. \\
+\hline
+{\em s} & Pointer to the \doxylink{structSnake}{Snake} struct. \\
+\hline
+{\em move} & The Game\+Move to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move hits a wall, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_a885611589f6294afada89fe88362e863}\label{game_8c_a885611589f6294afada89fe88362e863} 
+\index{game.c@{game.c}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{main\_menu()}{main\_menu()}}
+{\footnotesize\ttfamily void main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the main menu and initiates the game based on user input. 
+
+\Hypertarget{game_8c_a5116ca68ce8084da912814e96b5e23b7}\label{game_8c_a5116ca68ce8084da912814e96b5e23b7} 
+\index{game.c@{game.c}!map\_move@{map\_move}}
+\index{map\_move@{map\_move}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{map\_move()}{map\_move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPoint}{Point}} map\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{move }\end{DoxyParamCaption})}
+
+
+
+Maps a Game\+Move to a \doxylink{structPoint}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The Game\+Move. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding \doxylink{structPoint}{Point}. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_a8394954c77403f0f9fc5f1d16edea50c}\label{game_8c_a8394954c77403f0f9fc5f1d16edea50c} 
+\index{game.c@{game.c}!select\_game\_mode@{select\_game\_mode}}
+\index{select\_game\_mode@{select\_game\_mode}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{select\_game\_mode()}{select\_game\_mode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}} select\+\_\+game\+\_\+mode (\begin{DoxyParamCaption}\item[{char}]{select }\end{DoxyParamCaption})}
+
+
+
+Selects the game mode based on user input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The user\textquotesingle{}s choice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The selected game mode. 
+\end{DoxyReturn}
+\Hypertarget{game_8c_af679cdae0f82be8d2c96b203aa341904}\label{game_8c_af679cdae0f82be8d2c96b203aa341904} 
+\index{game.c@{game.c}!select\_who\_plays@{select\_who\_plays}}
+\index{select\_who\_plays@{select\_who\_plays}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{select\_who\_plays()}{select\_who\_plays()}}
+{\footnotesize\ttfamily void select\+\_\+who\+\_\+plays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{Game\+Mode}}}]{mode,  }\item[{\mbox{\hyperlink{structMazeInfo}{Maze\+Info}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Initiates the game based on the selected mode and maze configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The selected game mode. \\
+\hline
+{\em config} & Configuration information for the maze. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{game_8c_a9e2cdec8913653eaa72d561632ba21cc}\label{game_8c_a9e2cdec8913653eaa72d561632ba21cc} 
+\index{game.c@{game.c}!user\_plays@{user\_plays}}
+\index{user\_plays@{user\_plays}!game.c@{game.c}}
+\doxysubsubsection{\texorpdfstring{user\_plays()}{user\_plays()}}
+{\footnotesize\ttfamily void user\+\_\+plays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMazeInfo}{Maze\+Info}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Initiates an interactive game session. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Configuration information for the maze. \\
+\hline
+\end{DoxyParams}

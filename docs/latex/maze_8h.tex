@@ -1,0 +1,144 @@
+\doxysection{include/maze.h File Reference}
+\hypertarget{maze_8h}{}\label{maze_8h}\index{include/maze.h@{include/maze.h}}
+
+
+Declarations for Maze-\/related functions and structures.  
+
+
+{\ttfamily \#include "{}points\+\_\+list.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMazeInfo}{Maze\+Info}}
+\begin{DoxyCompactList}\small\item\em Contains information about the maze. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structMaze}{Maze}}
+\begin{DoxyCompactList}\small\item\em Represents a maze with its information and layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMazeInfo}{Maze\+Info}} \mbox{\hyperlink{maze_8h_aea30fd44bd37bd42cfc0ebfa623d0958}{maze\+\_\+info\+\_\+input\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em Reads maze configuration from user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{maze_8h_acfc9428ed3aa5d5195d4e8689a44d61d}{maze\+\_\+input\+\_\+read}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}m)
+\begin{DoxyCompactList}\small\item\em Reads the maze layout and initializes the \doxylink{structMaze}{Maze} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{maze_8h_aeb51d17b53cc3b1d8ba1abd795b43a2c}{init\+\_\+maze}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structMazeInfo}{Maze\+Info}} config)
+\begin{DoxyCompactList}\small\item\em Initializes a \doxylink{structMaze}{Maze} with the information provided by the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{maze_8h_a2b968903b095ef6829bbcd3860027332}{get\+\_\+maze\+\_\+index}} (\mbox{\hyperlink{structPoint}{Point}} p, int cols)
+\begin{DoxyCompactList}\small\item\em Gets the index in the maze string for a given \doxylink{structPoint}{Point}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{maze_8h_a0526082d16539428b8825011e6396f50}{is\+\_\+maze\+\_\+wall}} (char c)
+\begin{DoxyCompactList}\small\item\em Checks if a character represents a wall in the maze. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{maze_8h_adbcf14ca4dbab0c573750ddafd96ae45}{is\+\_\+point\+\_\+inside\+\_\+maze}} (\mbox{\hyperlink{structPoint}{Point}} p, \mbox{\hyperlink{structMazeInfo}{Maze\+Info}} info)
+\begin{DoxyCompactList}\small\item\em Checks if a \doxylink{structPoint}{Point} is within the bounds of the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declarations for Maze-\/related functions and structures. 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{maze_8h_a2b968903b095ef6829bbcd3860027332}\label{maze_8h_a2b968903b095ef6829bbcd3860027332} 
+\index{maze.h@{maze.h}!get\_maze\_index@{get\_maze\_index}}
+\index{get\_maze\_index@{get\_maze\_index}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{get\_maze\_index()}{get\_maze\_index()}}
+{\footnotesize\ttfamily int get\+\_\+maze\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+
+
+Gets the index in the maze string for a given \doxylink{structPoint}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The \doxylink{structPoint}{Point}. \\
+\hline
+{\em cols} & The number of columns in the maze. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index corresponding to the \doxylink{structPoint}{Point} in the maze string. 
+\end{DoxyReturn}
+\Hypertarget{maze_8h_aeb51d17b53cc3b1d8ba1abd795b43a2c}\label{maze_8h_aeb51d17b53cc3b1d8ba1abd795b43a2c} 
+\index{maze.h@{maze.h}!init\_maze@{init\_maze}}
+\index{init\_maze@{init\_maze}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{init\_maze()}{init\_maze()}}
+{\footnotesize\ttfamily void init\+\_\+maze (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structMazeInfo}{Maze\+Info}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes a \doxylink{structMaze}{Maze} with the information provided by the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A pointer to the \doxylink{structMaze}{Maze} struct to be initialized. \\
+\hline
+{\em config} & The \doxylink{structMazeInfo}{Maze\+Info} struct containing maze details. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{maze_8h_a0526082d16539428b8825011e6396f50}\label{maze_8h_a0526082d16539428b8825011e6396f50} 
+\index{maze.h@{maze.h}!is\_maze\_wall@{is\_maze\_wall}}
+\index{is\_maze\_wall@{is\_maze\_wall}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{is\_maze\_wall()}{is\_maze\_wall()}}
+{\footnotesize\ttfamily bool is\+\_\+maze\+\_\+wall (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Checks if a character represents a wall in the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the character represents a wall, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{maze_8h_adbcf14ca4dbab0c573750ddafd96ae45}\label{maze_8h_adbcf14ca4dbab0c573750ddafd96ae45} 
+\index{maze.h@{maze.h}!is\_point\_inside\_maze@{is\_point\_inside\_maze}}
+\index{is\_point\_inside\_maze@{is\_point\_inside\_maze}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{is\_point\_inside\_maze()}{is\_point\_inside\_maze()}}
+{\footnotesize\ttfamily bool is\+\_\+point\+\_\+inside\+\_\+maze (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p,  }\item[{\mbox{\hyperlink{structMazeInfo}{Maze\+Info}}}]{info }\end{DoxyParamCaption})}
+
+
+
+Checks if a \doxylink{structPoint}{Point} is within the bounds of the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The \doxylink{structPoint}{Point} to be checked.\+r \\
+\hline
+{\em info} & The \doxylink{structMazeInfo}{Maze\+Info} struct containing maze details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \doxylink{structPoint}{Point} is within the bounds, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{maze_8h_aea30fd44bd37bd42cfc0ebfa623d0958}\label{maze_8h_aea30fd44bd37bd42cfc0ebfa623d0958} 
+\index{maze.h@{maze.h}!maze\_info\_input\_read@{maze\_info\_input\_read}}
+\index{maze\_info\_input\_read@{maze\_info\_input\_read}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{maze\_info\_input\_read()}{maze\_info\_input\_read()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMazeInfo}{Maze\+Info}} maze\+\_\+info\+\_\+input\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads maze configuration from user input. 
+
+\begin{DoxyReturn}{Returns}
+The maze information provided by the user. 
+\end{DoxyReturn}
+\Hypertarget{maze_8h_acfc9428ed3aa5d5195d4e8689a44d61d}\label{maze_8h_acfc9428ed3aa5d5195d4e8689a44d61d} 
+\index{maze.h@{maze.h}!maze\_input\_read@{maze\_input\_read}}
+\index{maze\_input\_read@{maze\_input\_read}!maze.h@{maze.h}}
+\doxysubsubsection{\texorpdfstring{maze\_input\_read()}{maze\_input\_read()}}
+{\footnotesize\ttfamily void maze\+\_\+input\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{m }\end{DoxyParamCaption})}
+
+
+
+Reads the maze layout and initializes the \doxylink{structMaze}{Maze} struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A pointer to the \doxylink{structMaze}{Maze} struct. \\
+\hline
+\end{DoxyParams}

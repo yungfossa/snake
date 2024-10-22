@@ -1,0 +1,283 @@
+\doxysection{src/points\+\_\+list.c File Reference}
+\hypertarget{points__list_8c}{}\label{points__list_8c}\index{src/points\_list.c@{src/points\_list.c}}
+
+
+Implementation of the points\+\_\+list header (\doxylink{points__list_8h}{points\+\_\+list.\+h}).  
+
+
+{\ttfamily \#include "{}../include/points\+\_\+list.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{points__list_8c_a5e005b5124ae2cf7487b52958ace9026}{create\+\_\+point}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{structPoint}{Point} with given x and y coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{points__list_8c_a97304a3416a84937bbf347b7a06abf7c}{equal}} (\mbox{\hyperlink{structPoint}{Point}} p1, \mbox{\hyperlink{structPoint}{Point}} p2)
+\begin{DoxyCompactList}\small\item\em Checks if two Points are equal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a9ecbb127ecfa3cce6ed0be11b0ba47cf}{init\+\_\+points\+\_\+list}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Initializes a \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \mbox{\hyperlink{points__list_8c_af588d0a1d536ab86d8177138c8016cbc}{create\+\_\+points\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{points__list_8c_a348ab5adab42d4ab3c6e907bb199a11d}{is\+\_\+points\+\_\+list\+\_\+empty}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Checks if a \doxylink{structPointsList}{Points\+List} is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a662c4c7ae88422732227cf3d4387ff27}{push\+\_\+front\+\_\+point}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{structPoint}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{structPoint}{Point} to the front of a \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a0dfc605e252a895110a5b9fe3a58020c}{push\+\_\+back\+\_\+point}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{structPoint}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Adds a \doxylink{structPoint}{Point} to the back of a \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a0cd684002e7302fe4238ad73dcb1af06}{pop\+\_\+back}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Removes the last element from a \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_adcf2b350aaa9f46bdaf4bd01734fedad}{destroy\+\_\+points\+\_\+list}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Destroys a \doxylink{structPointsList}{Points\+List} and frees the allocated memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a1422cc4294588ea7d186b5255ffed677}{halve\+\_\+points\+\_\+list}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Halves the size of a \doxylink{structPointsList}{Points\+List} by removing elements from the end. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{points__list_8c_ab609ed8cd24363f28b3a60514e20ed3b}{get\+\_\+points\+\_\+list\+\_\+head}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{structPoint}{Point} at the head of a \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{points__list_8c_a342fd91e049c721c1e5defabd87b91e4}{contains}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{structPoint}{Point}} p)
+\begin{DoxyCompactList}\small\item\em Checks if a \doxylink{structPointsList}{Points\+List} contains a specific \doxylink{structPoint}{Point}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a49e6a952bc7602ab826593935f37d78b}{remove\+\_\+cells\+\_\+after\+\_\+target}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{structPoint}{Point}} meeting\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Removes Cells after a target \doxylink{structPoint}{Point} in a \doxylink{structPointsList}{Points\+List}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{points__list_8c_a59bd8746e75b91140213445e7f3c8f42}{adjust\+\_\+cells}} (\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{structPoint}{Point}} data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the points\+\_\+list header (\doxylink{points__list_8h}{points\+\_\+list.\+h}). 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{points__list_8c_a59bd8746e75b91140213445e7f3c8f42}\label{points__list_8c_a59bd8746e75b91140213445e7f3c8f42} 
+\index{points\_list.c@{points\_list.c}!adjust\_cells@{adjust\_cells}}
+\index{adjust\_cells@{adjust\_cells}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{adjust\_cells()}{adjust\_cells()}}
+{\footnotesize\ttfamily void adjust\+\_\+cells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List} \\
+\hline
+{\em p} & The \doxylink{structPoint}{Point} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a342fd91e049c721c1e5defabd87b91e4}\label{points__list_8c_a342fd91e049c721c1e5defabd87b91e4} 
+\index{points\_list.c@{points\_list.c}!contains@{contains}}
+\index{contains@{contains}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Checks if a \doxylink{structPointsList}{Points\+List} contains a specific \doxylink{structPoint}{Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+{\em p} & The \doxylink{structPoint}{Point} to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \doxylink{structPoint}{Point} is found, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{points__list_8c_a5e005b5124ae2cf7487b52958ace9026}\label{points__list_8c_a5e005b5124ae2cf7487b52958ace9026} 
+\index{points\_list.c@{points\_list.c}!create\_point@{create\_point}}
+\index{create\_point@{create\_point}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{create\_point()}{create\_point()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPoint}{Point}} create\+\_\+point (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Creates a \doxylink{structPoint}{Point} with given x and y coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created \doxylink{structPoint}{Point}. 
+\end{DoxyReturn}
+\Hypertarget{points__list_8c_af588d0a1d536ab86d8177138c8016cbc}\label{points__list_8c_af588d0a1d536ab86d8177138c8016cbc} 
+\index{points\_list.c@{points\_list.c}!create\_points\_list@{create\_points\_list}}
+\index{create\_points\_list@{create\_points\_list}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{create\_points\_list()}{create\_points\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} create\+\_\+points\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{structPointsList}{Points\+List}. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created \doxylink{structPointsList}{Points\+List}. 
+\end{DoxyReturn}
+\Hypertarget{points__list_8c_adcf2b350aaa9f46bdaf4bd01734fedad}\label{points__list_8c_adcf2b350aaa9f46bdaf4bd01734fedad} 
+\index{points\_list.c@{points\_list.c}!destroy\_points\_list@{destroy\_points\_list}}
+\index{destroy\_points\_list@{destroy\_points\_list}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_points\_list()}{destroy\_points\_list()}}
+{\footnotesize\ttfamily void destroy\+\_\+points\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Destroys a \doxylink{structPointsList}{Points\+List} and frees the allocated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List} to be destroyed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a97304a3416a84937bbf347b7a06abf7c}\label{points__list_8c_a97304a3416a84937bbf347b7a06abf7c} 
+\index{points\_list.c@{points\_list.c}!equal@{equal}}
+\index{equal@{equal}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{equal()}{equal()}}
+{\footnotesize\ttfamily bool equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p1,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Checks if two Points are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & The first \doxylink{structPoint}{Point}. \\
+\hline
+{\em p2} & The second \doxylink{structPoint}{Point}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Points are equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{points__list_8c_ab609ed8cd24363f28b3a60514e20ed3b}\label{points__list_8c_ab609ed8cd24363f28b3a60514e20ed3b} 
+\index{points\_list.c@{points\_list.c}!get\_points\_list\_head@{get\_points\_list\_head}}
+\index{get\_points\_list\_head@{get\_points\_list\_head}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{get\_points\_list\_head()}{get\_points\_list\_head()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPoint}{Point}} get\+\_\+points\+\_\+list\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Gets the \doxylink{structPoint}{Point} at the head of a \doxylink{structPointsList}{Points\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{structPoint}{Point} at the head of the \doxylink{structPointsList}{Points\+List}. 
+\end{DoxyReturn}
+\Hypertarget{points__list_8c_a1422cc4294588ea7d186b5255ffed677}\label{points__list_8c_a1422cc4294588ea7d186b5255ffed677} 
+\index{points\_list.c@{points\_list.c}!halve\_points\_list@{halve\_points\_list}}
+\index{halve\_points\_list@{halve\_points\_list}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{halve\_points\_list()}{halve\_points\_list()}}
+{\footnotesize\ttfamily void halve\+\_\+points\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Halves the size of a \doxylink{structPointsList}{Points\+List} by removing elements from the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List} to be halved. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a9ecbb127ecfa3cce6ed0be11b0ba47cf}\label{points__list_8c_a9ecbb127ecfa3cce6ed0be11b0ba47cf} 
+\index{points\_list.c@{points\_list.c}!init\_points\_list@{init\_points\_list}}
+\index{init\_points\_list@{init\_points\_list}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{init\_points\_list()}{init\_points\_list()}}
+{\footnotesize\ttfamily void init\+\_\+points\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Initializes a \doxylink{structPointsList}{Points\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List} to be initialized. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a348ab5adab42d4ab3c6e907bb199a11d}\label{points__list_8c_a348ab5adab42d4ab3c6e907bb199a11d} 
+\index{points\_list.c@{points\_list.c}!is\_points\_list\_empty@{is\_points\_list\_empty}}
+\index{is\_points\_list\_empty@{is\_points\_list\_empty}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{is\_points\_list\_empty()}{is\_points\_list\_empty()}}
+{\footnotesize\ttfamily bool is\+\_\+points\+\_\+list\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Checks if a \doxylink{structPointsList}{Points\+List} is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the \doxylink{structPointsList}{Points\+List} is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{points__list_8c_a0cd684002e7302fe4238ad73dcb1af06}\label{points__list_8c_a0cd684002e7302fe4238ad73dcb1af06} 
+\index{points\_list.c@{points\_list.c}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily void pop\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Removes the last element from a \doxylink{structPointsList}{Points\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a0dfc605e252a895110a5b9fe3a58020c}\label{points__list_8c_a0dfc605e252a895110a5b9fe3a58020c} 
+\index{points\_list.c@{points\_list.c}!push\_back\_point@{push\_back\_point}}
+\index{push\_back\_point@{push\_back\_point}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{push\_back\_point()}{push\_back\_point()}}
+{\footnotesize\ttfamily void push\+\_\+back\+\_\+point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Adds a \doxylink{structPoint}{Point} to the back of a \doxylink{structPointsList}{Points\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+{\em p} & The \doxylink{structPoint}{Point} to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a662c4c7ae88422732227cf3d4387ff27}\label{points__list_8c_a662c4c7ae88422732227cf3d4387ff27} 
+\index{points\_list.c@{points\_list.c}!push\_front\_point@{push\_front\_point}}
+\index{push\_front\_point@{push\_front\_point}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{push\_front\_point()}{push\_front\_point()}}
+{\footnotesize\ttfamily void push\+\_\+front\+\_\+point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Adds a \doxylink{structPoint}{Point} to the front of a \doxylink{structPointsList}{Points\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+{\em p} & The \doxylink{structPoint}{Point} to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{points__list_8c_a49e6a952bc7602ab826593935f37d78b}\label{points__list_8c_a49e6a952bc7602ab826593935f37d78b} 
+\index{points\_list.c@{points\_list.c}!remove\_cells\_after\_target@{remove\_cells\_after\_target}}
+\index{remove\_cells\_after\_target@{remove\_cells\_after\_target}!points\_list.c@{points\_list.c}}
+\doxysubsubsection{\texorpdfstring{remove\_cells\_after\_target()}{remove\_cells\_after\_target()}}
+{\footnotesize\ttfamily void remove\+\_\+cells\+\_\+after\+\_\+target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p\+\_\+target }\end{DoxyParamCaption})}
+
+
+
+Removes Cells after a target \doxylink{structPoint}{Point} in a \doxylink{structPointsList}{Points\+List}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to the \doxylink{structPointsList}{Points\+List}. \\
+\hline
+{\em p\+\_\+target} & The target \doxylink{structPoint}{Point}. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,49 @@
+\doxysection{Game Struct Reference}
+\hypertarget{structGame}{}\label{structGame}\index{Game@{Game}}
+
+
+Struct that wraps all the game elements (\doxylink{structMaze}{Maze}, \doxylink{structEntities}{Entities}) and also contains a field for the Game\+Status.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMaze}{Maze}} \mbox{\hyperlink{structGame_a84537a826d7cd2a5bee86f30a3dcd78d}{maze}}
+\item 
+\mbox{\hyperlink{structEntities}{Entities}} \mbox{\hyperlink{structGame_a80490229fabf5e881607b53153faa961}{entities}}
+\item 
+\mbox{\hyperlink{game_8h_a881b49e3802366255ad852f1c8624fd1}{Game\+Status}} \mbox{\hyperlink{structGame_a325c4d041e905af458d8b75453024bef}{state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct that wraps all the game elements (\doxylink{structMaze}{Maze}, \doxylink{structEntities}{Entities}) and also contains a field for the Game\+Status. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structGame_a80490229fabf5e881607b53153faa961}\label{structGame_a80490229fabf5e881607b53153faa961} 
+\index{Game@{Game}!entities@{entities}}
+\index{entities@{entities}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{entities}{entities}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structEntities}{Entities}} Game\+::entities}
+
+The \doxylink{structEntities}{Entities} struct containing information about game entities (\doxylink{structSnake}{Snake} and \doxylink{structDrill}{Drill}). \Hypertarget{structGame_a84537a826d7cd2a5bee86f30a3dcd78d}\label{structGame_a84537a826d7cd2a5bee86f30a3dcd78d} 
+\index{Game@{Game}!maze@{maze}}
+\index{maze@{maze}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{maze}{maze}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMaze}{Maze}} Game\+::maze}
+
+The \doxylink{structMaze}{Maze} struct representing the game\textquotesingle{}s maze layout. \Hypertarget{structGame_a325c4d041e905af458d8b75453024bef}\label{structGame_a325c4d041e905af458d8b75453024bef} 
+\index{Game@{Game}!state@{state}}
+\index{state@{state}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game_8h_a881b49e3802366255ad852f1c8624fd1}{Game\+Status}} Game\+::state}
+
+The current status of the game (IN\+\_\+\+PROGRESS or FINISHED). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{game_8h}{game.\+h}}\end{DoxyCompactItemize}

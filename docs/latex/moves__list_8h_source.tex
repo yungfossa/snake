@@ -1,0 +1,42 @@
+\doxysection{moves\+\_\+list.\+h}
+\hypertarget{moves__list_8h_source}{}\label{moves__list_8h_source}\index{include/moves\_list.h@{include/moves\_list.h}}
+\mbox{\hyperlink{moves__list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_MOVES\_LIST\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SNAKE\_MOVES\_LIST\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMoveCell}{MoveCell}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ \mbox{\hyperlink{structMoveCell_a6cbc0ea289781791e223d70ffd1811bf}{info}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMoveCell}{MoveCell}}\ *\mbox{\hyperlink{structMoveCell_a2a85352ef91889e408173b5de7de3f02}{next}};\ \ \ \ \ }
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{structMoveCell}{MoveCell}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structMoveCell}{MoveCell}}*\ \mbox{\hyperlink{moves__list_8h_adde30347178d7d7611008970e3ab0e80}{PMoveCell}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMovesList}{MovesList}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structMoveCell}{PMoveCell}}\ \mbox{\hyperlink{structMovesList_a63db16b63bfdc435bbd42a4dce25cc3e}{head}};\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{structMoveCell}{PMoveCell}}\ \mbox{\hyperlink{structMovesList_a32456220fee0ee07cae971f54db88552}{tail}};\ \ \ \ }
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{structMovesList}{MovesList}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{structMovesList}{MovesList}}*\ \mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMovesList}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{moves__list_8h_ab1f97cad19091091fe8fe781fbd2f244}{init\_moves\_list}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \mbox{\hyperlink{structMovesList}{PMovesList}}\ \mbox{\hyperlink{moves__list_8h_acce73ad6e65467ef92863ce7bba2b418}{create\_moves\_list}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{moves__list_8h_a4554cce03600ce028d002fb1c3f3d22a}{push\_front\_move}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l,\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ m);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{moves__list_8h_a6775d02f86c1b6e97a87626e0cd9fe79}{destroy\_moves\_list}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{moves__list_8h_ad868b3eda3409bcec99150d8b5c743da}{push\_back\_move}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l,\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ m);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{moves__list_8h_a30f9ba528ce60f2d074d7b7d0b80a04e}{is\_moves\_list\_empty}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{moves__list_8h_aa3785a3a4967120c616a214218610749}{print\_moves\_list}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00089\ }
+
+\end{DoxyCode}

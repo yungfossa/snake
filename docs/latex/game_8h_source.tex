@@ -1,0 +1,72 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{include/game.h@{include/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_GAME\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SNAKE\_GAME\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{maze_8h}{maze.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entities_8h}{entities.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28eaba595d8bca8bc5e67c37c0a9d89becfa}{UP}}\ =\ \textcolor{charliteral}{'N'},\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28ea9b0b4a95b99523966e0e34ffdadac9da}{DOWN}}\ =\ \textcolor{charliteral}{'S'},\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28eadb45120aafd37a973140edee24708065}{LEFT}}\ =\ \textcolor{charliteral}{'W'},\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28eaec8379af7490bb9eaaf579cf17876f38}{RIGHT}}\ =\ \textcolor{charliteral}{'E'}\ \ }
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{game_8h_a881b49e3802366255ad852f1c8624fd1a643cea6438bbca00e218a0b1c05e1012}{IN\_PROGRESS}},\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{game_8h_a881b49e3802366255ad852f1c8624fd1adbd1812bee789fbf3548cf79d3f2b400}{FINISHED}}\ \ \ \ \ }
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{game_8h_a881b49e3802366255ad852f1c8624fd1}{GameStatus}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589dea39dbc0bbace57a227b3a097327d83362}{NOT\_DECIDED}},\ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589dea6114d9d0e20dc98878a365e418b83ee4}{INTERACTIVE}},\ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589dea9c74caa56a3c05723eb1dbad44bc9bc3}{AI}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{GameMode}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structGame}{Game}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structMaze}{Maze}}\ \mbox{\hyperlink{structGame_a84537a826d7cd2a5bee86f30a3dcd78d}{maze}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{structEntities}{Entities}}\ \mbox{\hyperlink{structGame_a80490229fabf5e881607b53153faa961}{entities}};\ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{game_8h_a881b49e3802366255ad852f1c8624fd1}{GameStatus}}\ \mbox{\hyperlink{structGame_a325c4d041e905af458d8b75453024bef}{state}};\ \ \ \ }
+\DoxyCodeLine{00054\ \}\ \mbox{\hyperlink{structGame}{Game}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{structGame}{Game}}\ *\mbox{\hyperlink{game_8h_a1eed9836aedee7d27339c6657d779ce5}{create\_game}}(\mbox{\hyperlink{structMazeInfo}{MazeInfo}}\ config);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_ac27becf9140ef1374ff8acd13d6e6bba}{game\_entities\_update}}(\mbox{\hyperlink{structMaze}{Maze}}\ *m,\ \mbox{\hyperlink{structEntities}{Entities}}\ *e,\ \mbox{\hyperlink{structPoint}{Point}}\ next);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_afdb40819206580ef656f4a1ff10cc4fa}{game\_status\_update}}(\mbox{\hyperlink{structGame}{Game}}\ **g);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \mbox{\hyperlink{structPoint}{Point}}\ \mbox{\hyperlink{game_8h_a7637b55caa39016eea3c6f909dba4906}{map\_move}}(\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ move);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \mbox{\hyperlink{structPoint}{Point}}\ \mbox{\hyperlink{game_8h_a58a2003e59792e3f42446c7817e19071}{calculate\_move}}(\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ move,\ \mbox{\hyperlink{structPoint}{Point}}\ p);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ \mbox{\hyperlink{game_8h_ae79069a015d0e1b48ed63e508f741445}{get\_next\_user\_move}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a9e2cdec8913653eaa72d561632ba21cc}{user\_plays}}(\mbox{\hyperlink{structMazeInfo}{MazeInfo}}\ config);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a00e64fe07ec19f63236cabe4a505317a}{ai\_swap\_moves}}(\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ nd,\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ *pd);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{game_8h_a2ba26f038a8d2caa1fe94dce6f808d7e}{is\_maze\_wall\_ai}}(\mbox{\hyperlink{structMaze}{Maze}}\ *m,\ \mbox{\hyperlink{structSnake}{Snake}}\ *s,\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ move);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00126\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ \mbox{\hyperlink{game_8h_a4482cbc6b5fa3182d748444f76df7ce6}{ai\_turn\_right}}(\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ move);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00134\ \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ \mbox{\hyperlink{game_8h_a1bbcbd586e27bd95aa93e58f98954abe}{ai\_turn\_left}}(\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{GameMove}}\ move);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a996b546fff61d684d00d941532f55ba1}{ai\_plays}}(\mbox{\hyperlink{structMazeInfo}{MazeInfo}}\ config);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{game_8h_adfb636858010d1340c8d734716abbb89}{get\_menu\_choice}}();}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{GameMode}}\ \mbox{\hyperlink{game_8h_a37638db4ea9a1c90f87d7732dee116a9}{select\_game\_mode}}(\textcolor{keywordtype}{char}\ select);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_af679cdae0f82be8d2c96b203aa341904}{select\_who\_plays}}(\mbox{\hyperlink{game_8h_aaf5ef5a17b53e9997c837b07015589de}{GameMode}}\ mode,\ \mbox{\hyperlink{structMazeInfo}{MazeInfo}}\ config);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a885611589f6294afada89fe88362e863}{main\_menu}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a91b5576c516ed5ba786d18560d26995a}{destroy\_game}}(\mbox{\hyperlink{structGame}{Game}}\ *g);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

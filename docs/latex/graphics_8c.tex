@@ -1,0 +1,230 @@
+\doxysection{src/graphics.c File Reference}
+\hypertarget{graphics_8c}{}\label{graphics_8c}\index{src/graphics.c@{src/graphics.c}}
+
+
+Implementation of the graphics header (\doxylink{graphics_8h}{graphics.\+h}).  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}../include/graphics.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphics_8c_a20f91c866557ae6af943885b0a466f91}{display\+\_\+title}} ()
+\begin{DoxyCompactList}\small\item\em Displays the title of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a62c8a44c1261279e01a1b2afdb22b57c}{display\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Displays the main menu options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a1abfe21d9bf268190a37d7a1d71635b1}{display\+\_\+interactive\+\_\+mode\+\_\+final\+\_\+score}} (int score)
+\begin{DoxyCompactList}\small\item\em Displays the final score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_adc2293dbdd9c5734400dfe672f6b11be}{display\+\_\+interactive\+\_\+mode\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Displays instructions for interactive mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a37fdef58f7a9d50285415646a23eb6e6}{display\+\_\+ai\+\_\+mode\+\_\+instructions}} ()
+\begin{DoxyCompactList}\small\item\em Displays instructions for AI mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_af7734d14a5ed7b660b7343ab8cde3e40}{display\+\_\+maze\+\_\+and\+\_\+entities}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}e)
+\begin{DoxyCompactList}\small\item\em Displays the maze layout and game entities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a4953d1edcbbfc7e420c423ded1d5621a}{clear\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Clears the terminal screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a11cef42f8fc390ceee7b382e8a000b04}{display\+\_\+ai\+\_\+solution\+\_\+road}} (\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}ai\+\_\+road)
+\begin{DoxyCompactList}\small\item\em Displays the maze layout including a dotted road, which is the solution found by the AI to reach the end of the labyrinth\+: it also displays the \doxylink{structSnake}{Snake}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a619d1eab52d6c0d21641b9c4a5c0456c}{display\+\_\+ai\+\_\+moves\+\_\+and\+\_\+score}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}ai\+\_\+moves, \mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Displays the moves done by the AI to reach the end of the labyrinth and the final score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_aa4ba8c6fce4deaa5166d826c72ebbee4}{display\+\_\+play\+\_\+again}} ()
+\begin{DoxyCompactList}\small\item\em Displays the option to play again. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_af5bafc9842eb94e98efa315cc1fb6a46}{display\+\_\+message}} (char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Displays a message in the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a1c78e53814d5e4b7254afa9264620d17}{display\+\_\+maze\+\_\+tile}} (char c)
+\begin{DoxyCompactList}\small\item\em Displays a tile of the maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_a1dd37dbd4b8eccf381ba13b1360804f3}{enable\+\_\+input\+\_\+hiding}} ()
+\begin{DoxyCompactList}\small\item\em Enables hiding user input in the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8c_aeece04671952b4732dbfd929b859de68}{disable\+\_\+input\+\_\+hiding}} ()
+\begin{DoxyCompactList}\small\item\em Disables hiding user input in the terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the graphics header (\doxylink{graphics_8h}{graphics.\+h}). 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{graphics_8c_a4953d1edcbbfc7e420c423ded1d5621a}\label{graphics_8c_a4953d1edcbbfc7e420c423ded1d5621a} 
+\index{graphics.c@{graphics.c}!clear\_screen@{clear\_screen}}
+\index{clear\_screen@{clear\_screen}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{clear\_screen()}{clear\_screen()}}
+{\footnotesize\ttfamily void clear\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the terminal screen. 
+
+\Hypertarget{graphics_8c_aeece04671952b4732dbfd929b859de68}\label{graphics_8c_aeece04671952b4732dbfd929b859de68} 
+\index{graphics.c@{graphics.c}!disable\_input\_hiding@{disable\_input\_hiding}}
+\index{disable\_input\_hiding@{disable\_input\_hiding}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{disable\_input\_hiding()}{disable\_input\_hiding()}}
+{\footnotesize\ttfamily void disable\+\_\+input\+\_\+hiding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables hiding user input in the terminal. 
+
+\Hypertarget{graphics_8c_a37fdef58f7a9d50285415646a23eb6e6}\label{graphics_8c_a37fdef58f7a9d50285415646a23eb6e6} 
+\index{graphics.c@{graphics.c}!display\_ai\_mode\_instructions@{display\_ai\_mode\_instructions}}
+\index{display\_ai\_mode\_instructions@{display\_ai\_mode\_instructions}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_ai\_mode\_instructions()}{display\_ai\_mode\_instructions()}}
+{\footnotesize\ttfamily void display\+\_\+ai\+\_\+mode\+\_\+instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays instructions for AI mode. 
+
+\Hypertarget{graphics_8c_a619d1eab52d6c0d21641b9c4a5c0456c}\label{graphics_8c_a619d1eab52d6c0d21641b9c4a5c0456c} 
+\index{graphics.c@{graphics.c}!display\_ai\_moves\_and\_score@{display\_ai\_moves\_and\_score}}
+\index{display\_ai\_moves\_and\_score@{display\_ai\_moves\_and\_score}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_ai\_moves\_and\_score()}{display\_ai\_moves\_and\_score()}}
+{\footnotesize\ttfamily void display\+\_\+ai\+\_\+moves\+\_\+and\+\_\+score (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+
+
+Displays the moves done by the AI to reach the end of the labyrinth and the final score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a \doxylink{structMovesList}{Moves\+List} which contains all the moves done by the AI mode. \\
+\hline
+{\em s} & A pointer to the \doxylink{structSnakeEntity}{Snake\+Entity} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8c_a11cef42f8fc390ceee7b382e8a000b04}\label{graphics_8c_a11cef42f8fc390ceee7b382e8a000b04} 
+\index{graphics.c@{graphics.c}!display\_ai\_solution\_road@{display\_ai\_solution\_road}}
+\index{display\_ai\_solution\_road@{display\_ai\_solution\_road}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_ai\_solution\_road()}{display\_ai\_solution\_road()}}
+{\footnotesize\ttfamily void display\+\_\+ai\+\_\+solution\+\_\+road (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s,  }\item[{\mbox{\hyperlink{points__list_8h_aa4a47dad7c4cbaad82b62b71e2f941dc}{PPoints\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Displays the maze layout including a dotted road, which is the solution found by the AI to reach the end of the labyrinth\+: it also displays the \doxylink{structSnake}{Snake}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A pointer to the \doxylink{structMaze}{Maze} struct \\
+\hline
+{\em s} & A pointer to the \doxylink{structSnake}{Snake} struct \\
+\hline
+{\em l} & A pointer to a \doxylink{structPointsList}{Points\+List} which contains all the Points crossed by the AI. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8c_a1abfe21d9bf268190a37d7a1d71635b1}\label{graphics_8c_a1abfe21d9bf268190a37d7a1d71635b1} 
+\index{graphics.c@{graphics.c}!display\_interactive\_mode\_final\_score@{display\_interactive\_mode\_final\_score}}
+\index{display\_interactive\_mode\_final\_score@{display\_interactive\_mode\_final\_score}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_interactive\_mode\_final\_score()}{display\_interactive\_mode\_final\_score()}}
+{\footnotesize\ttfamily void display\+\_\+interactive\+\_\+mode\+\_\+final\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Displays the final score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & The final score of the game. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8c_adc2293dbdd9c5734400dfe672f6b11be}\label{graphics_8c_adc2293dbdd9c5734400dfe672f6b11be} 
+\index{graphics.c@{graphics.c}!display\_interactive\_mode\_instructions@{display\_interactive\_mode\_instructions}}
+\index{display\_interactive\_mode\_instructions@{display\_interactive\_mode\_instructions}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_interactive\_mode\_instructions()}{display\_interactive\_mode\_instructions()}}
+{\footnotesize\ttfamily void display\+\_\+interactive\+\_\+mode\+\_\+instructions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays instructions for interactive mode. 
+
+\Hypertarget{graphics_8c_a62c8a44c1261279e01a1b2afdb22b57c}\label{graphics_8c_a62c8a44c1261279e01a1b2afdb22b57c} 
+\index{graphics.c@{graphics.c}!display\_main\_menu@{display\_main\_menu}}
+\index{display\_main\_menu@{display\_main\_menu}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_main\_menu()}{display\_main\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the main menu options. 
+
+\Hypertarget{graphics_8c_af7734d14a5ed7b660b7343ab8cde3e40}\label{graphics_8c_af7734d14a5ed7b660b7343ab8cde3e40} 
+\index{graphics.c@{graphics.c}!display\_maze\_and\_entities@{display\_maze\_and\_entities}}
+\index{display\_maze\_and\_entities@{display\_maze\_and\_entities}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_maze\_and\_entities()}{display\_maze\_and\_entities()}}
+{\footnotesize\ttfamily void display\+\_\+maze\+\_\+and\+\_\+entities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaze}{Maze}} \texorpdfstring{$\ast$}{*}}]{m,  }\item[{\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}}]{e }\end{DoxyParamCaption})}
+
+
+
+Displays the maze layout and game entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A pointer to the \doxylink{structMaze}{Maze} struct. \\
+\hline
+{\em e} & A pointer to the \doxylink{structEntities}{Entities} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8c_a1c78e53814d5e4b7254afa9264620d17}\label{graphics_8c_a1c78e53814d5e4b7254afa9264620d17} 
+\index{graphics.c@{graphics.c}!display\_maze\_tile@{display\_maze\_tile}}
+\index{display\_maze\_tile@{display\_maze\_tile}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_maze\_tile()}{display\_maze\_tile()}}
+{\footnotesize\ttfamily void display\+\_\+maze\+\_\+tile (\begin{DoxyParamCaption}\item[{char}]{tile }\end{DoxyParamCaption})}
+
+
+
+Displays a tile of the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & The character representing the tile. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8c_af5bafc9842eb94e98efa315cc1fb6a46}\label{graphics_8c_af5bafc9842eb94e98efa315cc1fb6a46} 
+\index{graphics.c@{graphics.c}!display\_message@{display\_message}}
+\index{display\_message@{display\_message}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_message()}{display\_message()}}
+{\footnotesize\ttfamily void display\+\_\+message (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Displays a message in the terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be displayed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{graphics_8c_aa4ba8c6fce4deaa5166d826c72ebbee4}\label{graphics_8c_aa4ba8c6fce4deaa5166d826c72ebbee4} 
+\index{graphics.c@{graphics.c}!display\_play\_again@{display\_play\_again}}
+\index{display\_play\_again@{display\_play\_again}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_play\_again()}{display\_play\_again()}}
+{\footnotesize\ttfamily void display\+\_\+play\+\_\+again (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the option to play again. 
+
+\Hypertarget{graphics_8c_a20f91c866557ae6af943885b0a466f91}\label{graphics_8c_a20f91c866557ae6af943885b0a466f91} 
+\index{graphics.c@{graphics.c}!display\_title@{display\_title}}
+\index{display\_title@{display\_title}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{display\_title()}{display\_title()}}
+{\footnotesize\ttfamily void display\+\_\+title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the title of the game. 
+
+\Hypertarget{graphics_8c_a1dd37dbd4b8eccf381ba13b1360804f3}\label{graphics_8c_a1dd37dbd4b8eccf381ba13b1360804f3} 
+\index{graphics.c@{graphics.c}!enable\_input\_hiding@{enable\_input\_hiding}}
+\index{enable\_input\_hiding@{enable\_input\_hiding}!graphics.c@{graphics.c}}
+\doxysubsubsection{\texorpdfstring{enable\_input\_hiding()}{enable\_input\_hiding()}}
+{\footnotesize\ttfamily void enable\+\_\+input\+\_\+hiding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables hiding user input in the terminal. 
+

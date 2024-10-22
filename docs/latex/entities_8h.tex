@@ -1,0 +1,156 @@
+\doxysection{include/entities.h File Reference}
+\hypertarget{entities_8h}{}\label{entities_8h}\index{include/entities.h@{include/entities.h}}
+
+
+Declarations for game entities and related functions.  
+
+
+{\ttfamily \#include "{}points\+\_\+list.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSnake}{Snake}}
+\item 
+struct \mbox{\hyperlink{structDrill}{Drill}}
+\item 
+struct \mbox{\hyperlink{structEntities}{Entities}}
+\begin{DoxyCompactList}\small\item\em Contains all the game entities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{entities_8h_a50423b72083893c64fdb3a322a78d832}{init\+\_\+entities}} (\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}e, \mbox{\hyperlink{structPoint}{Point}} p\+\_\+start)
+\begin{DoxyCompactList}\small\item\em Initializes the game entities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entities_8h_a8a769a721d61678a16e7a02f2484931b}{entities\+\_\+update}} (\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}e, char \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Updates the game entities based on the last char read from the maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entities_8h_a36ba2ad165f9863ee2193c751bb13eae}{snake\+\_\+apply\+\_\+coin}} (\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Applies the effects of grabbing a coin to the snake. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entities_8h_acd9649dd3c9c413eb7b21eb030f538b6}{snake\+\_\+apply\+\_\+sudden}} (\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Applies the sudden event effect to the snake. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entities_8h_ac9f95b896c027547c02597f7c94ce0dd}{snake\+\_\+update}} (\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{structPoint}{Point}} new\+\_\+head\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Updates the snake\textquotesingle{}s position and body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entities_8h_aa7b663ea8dd83281cfc489ede6b2303c}{drill\+\_\+set}} (\mbox{\hyperlink{structDrill}{Drill}} \texorpdfstring{$\ast$}{*}d)
+\begin{DoxyCompactList}\small\item\em Sets the drill entity to be active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{entities_8h_ac404cba1a625a403eccacb18f91c39ba}{drill\+\_\+update}} (\mbox{\hyperlink{structDrill}{Drill}} \texorpdfstring{$\ast$}{*}d)
+\begin{DoxyCompactList}\small\item\em Updates the state of the drill entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declarations for game entities and related functions. 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{entities_8h_aa7b663ea8dd83281cfc489ede6b2303c}\label{entities_8h_aa7b663ea8dd83281cfc489ede6b2303c} 
+\index{entities.h@{entities.h}!drill\_set@{drill\_set}}
+\index{drill\_set@{drill\_set}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{drill\_set()}{drill\_set()}}
+{\footnotesize\ttfamily void drill\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDrill}{Drill}} \texorpdfstring{$\ast$}{*}}]{d }\end{DoxyParamCaption})}
+
+
+
+Sets the drill entity to be active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A pointer to the \doxylink{structDrill}{Drill} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{entities_8h_ac404cba1a625a403eccacb18f91c39ba}\label{entities_8h_ac404cba1a625a403eccacb18f91c39ba} 
+\index{entities.h@{entities.h}!drill\_update@{drill\_update}}
+\index{drill\_update@{drill\_update}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{drill\_update()}{drill\_update()}}
+{\footnotesize\ttfamily void drill\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDrill}{Drill}} \texorpdfstring{$\ast$}{*}}]{d }\end{DoxyParamCaption})}
+
+
+
+Updates the state of the drill entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A pointer to the \doxylink{structDrill}{Drill} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{entities_8h_a8a769a721d61678a16e7a02f2484931b}\label{entities_8h_a8a769a721d61678a16e7a02f2484931b} 
+\index{entities.h@{entities.h}!entities\_update@{entities\_update}}
+\index{entities\_update@{entities\_update}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{entities\_update()}{entities\_update()}}
+{\footnotesize\ttfamily void entities\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{e,  }\item[{char \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+
+
+Updates the game entities based on the last char read from the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & A pointer to the last char read . \\
+\hline
+{\em e} & A pointer to the \doxylink{structEntities}{Entities} struct to be updated. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{entities_8h_a50423b72083893c64fdb3a322a78d832}\label{entities_8h_a50423b72083893c64fdb3a322a78d832} 
+\index{entities.h@{entities.h}!init\_entities@{init\_entities}}
+\index{init\_entities@{init\_entities}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{init\_entities()}{init\_entities()}}
+{\footnotesize\ttfamily void init\+\_\+entities (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEntities}{Entities}} \texorpdfstring{$\ast$}{*}}]{e,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{p\+\_\+start }\end{DoxyParamCaption})}
+
+
+
+Initializes the game entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & A pointer to the \doxylink{structEntities}{Entities} struct to be initialized. \\
+\hline
+{\em p\+\_\+start} & The starting position of the snake. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{entities_8h_a36ba2ad165f9863ee2193c751bb13eae}\label{entities_8h_a36ba2ad165f9863ee2193c751bb13eae} 
+\index{entities.h@{entities.h}!snake\_apply\_coin@{snake\_apply\_coin}}
+\index{snake\_apply\_coin@{snake\_apply\_coin}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{snake\_apply\_coin()}{snake\_apply\_coin()}}
+{\footnotesize\ttfamily void snake\+\_\+apply\+\_\+coin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+
+
+Applies the effects of grabbing a coin to the snake. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A pointer to the \doxylink{structSnake}{Snake} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{entities_8h_acd9649dd3c9c413eb7b21eb030f538b6}\label{entities_8h_acd9649dd3c9c413eb7b21eb030f538b6} 
+\index{entities.h@{entities.h}!snake\_apply\_sudden@{snake\_apply\_sudden}}
+\index{snake\_apply\_sudden@{snake\_apply\_sudden}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{snake\_apply\_sudden()}{snake\_apply\_sudden()}}
+{\footnotesize\ttfamily void snake\+\_\+apply\+\_\+sudden (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s }\end{DoxyParamCaption})}
+
+
+
+Applies the sudden event effect to the snake. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A pointer to the \doxylink{structSnake}{Snake} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{entities_8h_ac9f95b896c027547c02597f7c94ce0dd}\label{entities_8h_ac9f95b896c027547c02597f7c94ce0dd} 
+\index{entities.h@{entities.h}!snake\_update@{snake\_update}}
+\index{snake\_update@{snake\_update}!entities.h@{entities.h}}
+\doxysubsubsection{\texorpdfstring{snake\_update()}{snake\_update()}}
+{\footnotesize\ttfamily void snake\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSnake}{Snake}} \texorpdfstring{$\ast$}{*}}]{s,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{new\+\_\+head\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Updates the snake\textquotesingle{}s position and body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & A pointer to the \doxylink{structSnake}{Snake} struct. \\
+\hline
+{\em new\+\_\+head\+\_\+pos} & The new position of the snake\textquotesingle{}s head. \\
+\hline
+\end{DoxyParams}

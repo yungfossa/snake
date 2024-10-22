@@ -1,0 +1,60 @@
+\doxysection{graphics.\+h}
+\hypertarget{graphics_8h_source}{}\label{graphics_8h_source}\index{include/graphics.h@{include/graphics.h}}
+\mbox{\hyperlink{graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SNAKE\_GRAPHICS\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SNAKE\_GRAPHICS\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{moves__list_8h}{moves\_list.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{entities_8h}{entities.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_8h}{game.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ ww\ "{}🆆\ "{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ aa\ "{}🅰\ "{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ ss\ "{}🆂\ "{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ dd\ "{}🅳\ "{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ ee\ "{}🅴\ "{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ uu\ "{}🆄\ "{}}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ RED\ "{}\(\backslash\)e[0;31m"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ GRN\ "{}\(\backslash\)e[0;32m"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ YEL\ "{}\(\backslash\)e[0;33m"{}}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ MAG\ "{}\(\backslash\)e[0;35m"{}}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ CYN\ "{}\(\backslash\)e[0;36m"{}}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ BRED\ "{}\(\backslash\)e[1;31m"{}}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ BMAG\ "{}\(\backslash\)e[1;35m"{}}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ BCYN\ "{}\(\backslash\)e[1;36m"{}}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#define\ CRESET\ "{}\(\backslash\)e[0m"{}}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a20f91c866557ae6af943885b0a466f91}{display\_title}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a62c8a44c1261279e01a1b2afdb22b57c}{display\_main\_menu}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_af7734d14a5ed7b660b7343ab8cde3e40}{display\_maze\_and\_entities}}(\mbox{\hyperlink{structMaze}{Maze}}\ *m,\ \mbox{\hyperlink{structEntities}{Entities}}\ *e);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a1abfe21d9bf268190a37d7a1d71635b1}{display\_interactive\_mode\_final\_score}}(\textcolor{keywordtype}{int}\ score);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_adc2293dbdd9c5734400dfe672f6b11be}{display\_interactive\_mode\_instructions}}();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_aa6d1ab876279e486c652883a09c77b47}{display\_ai\_solution\_road}}(\mbox{\hyperlink{structMaze}{Maze}}\ *m,\ \mbox{\hyperlink{structSnake}{Snake}}\ *s,\ \mbox{\hyperlink{structPointsList}{PPointsList}}\ *l);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a6e73cc46021259087d9170ee51ee8ee5}{display\_ai\_moves\_and\_score}}(\mbox{\hyperlink{structMovesList}{PMovesList}}\ *l,\ \mbox{\hyperlink{structSnake}{Snake}}\ *s);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00142\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a37fdef58f7a9d50285415646a23eb6e6}{display\_ai\_mode\_instructions}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_aa4ba8c6fce4deaa5166d826c72ebbee4}{display\_play\_again}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_ad39792bb87b41437a35711d15a9661b7}{display\_maze\_tile}}(\textcolor{keywordtype}{char}\ tile);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_ae1600cd97b24d3aae11128b55a440b57}{display\_message}}(\textcolor{keywordtype}{char}\ *message);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}{clear\_screen}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_a1dd37dbd4b8eccf381ba13b1360804f3}{enable\_input\_hiding}}();}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{graphics_8h_aeece04671952b4732dbfd929b859de68}{disable\_input\_hiding}}();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

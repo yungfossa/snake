@@ -1,0 +1,147 @@
+\doxysection{src/moves\+\_\+list.c File Reference}
+\hypertarget{moves__list_8c}{}\label{moves__list_8c}\index{src/moves\_list.c@{src/moves\_list.c}}
+
+
+Implementation of the moves\+\_\+list header (\doxylink{moves__list_8h}{moves\+\_\+list.\+h}).  
+
+
+{\ttfamily \#include "{}../include/moves\+\_\+list.\+h"{}}\newline
+{\ttfamily \#include "{}../include/graphics.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{moves__list_8c_ab1f97cad19091091fe8fe781fbd2f244}{init\+\_\+moves\+\_\+list}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Initializes a moves list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \mbox{\hyperlink{moves__list_8c_acce73ad6e65467ef92863ce7bba2b418}{create\+\_\+moves\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new empty moves list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{moves__list_8c_a4554cce03600ce028d002fb1c3f3d22a}{push\+\_\+front\+\_\+move}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} m)
+\begin{DoxyCompactList}\small\item\em Adds a game move to the front of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{moves__list_8c_ad868b3eda3409bcec99150d8b5c743da}{push\+\_\+back\+\_\+move}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l, \mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}} m)
+\begin{DoxyCompactList}\small\item\em Adds a game move to the end of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{moves__list_8c_a6775d02f86c1b6e97a87626e0cd9fe79}{destroy\+\_\+moves\+\_\+list}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Destroys a moves list, freeing all allocated memory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{moves__list_8c_a30f9ba528ce60f2d074d7b7d0b80a04e}{is\+\_\+moves\+\_\+list\+\_\+empty}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Checks if a moves list is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{moves__list_8c_aa3785a3a4967120c616a214218610749}{print\+\_\+moves\+\_\+list}} (\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}l)
+\begin{DoxyCompactList}\small\item\em Prints the contents of a moves list. If the list is empty, the function prints a message on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the moves\+\_\+list header (\doxylink{moves__list_8h}{moves\+\_\+list.\+h}). 
+
+\begin{DoxyAuthor}{Author}
+Marco Netti 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{moves__list_8c_acce73ad6e65467ef92863ce7bba2b418}\label{moves__list_8c_acce73ad6e65467ef92863ce7bba2b418} 
+\index{moves\_list.c@{moves\_list.c}!create\_moves\_list@{create\_moves\_list}}
+\index{create\_moves\_list@{create\_moves\_list}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{create\_moves\_list()}{create\_moves\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} create\+\_\+moves\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new empty moves list. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created \doxylink{structMovesList}{Moves\+List} struct. 
+\end{DoxyReturn}
+\Hypertarget{moves__list_8c_a6775d02f86c1b6e97a87626e0cd9fe79}\label{moves__list_8c_a6775d02f86c1b6e97a87626e0cd9fe79} 
+\index{moves\_list.c@{moves\_list.c}!destroy\_moves\_list@{destroy\_moves\_list}}
+\index{destroy\_moves\_list@{destroy\_moves\_list}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_moves\_list()}{destroy\_moves\_list()}}
+{\footnotesize\ttfamily void destroy\+\_\+moves\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Destroys a moves list, freeing all allocated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a pointer to the \doxylink{structMovesList}{Moves\+List} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{moves__list_8c_ab1f97cad19091091fe8fe781fbd2f244}\label{moves__list_8c_ab1f97cad19091091fe8fe781fbd2f244} 
+\index{moves\_list.c@{moves\_list.c}!init\_moves\_list@{init\_moves\_list}}
+\index{init\_moves\_list@{init\_moves\_list}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{init\_moves\_list()}{init\_moves\_list()}}
+{\footnotesize\ttfamily void init\+\_\+moves\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Initializes a moves list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a pointer to the \doxylink{structMovesList}{Moves\+List} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{moves__list_8c_a30f9ba528ce60f2d074d7b7d0b80a04e}\label{moves__list_8c_a30f9ba528ce60f2d074d7b7d0b80a04e} 
+\index{moves\_list.c@{moves\_list.c}!is\_moves\_list\_empty@{is\_moves\_list\_empty}}
+\index{is\_moves\_list\_empty@{is\_moves\_list\_empty}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{is\_moves\_list\_empty()}{is\_moves\_list\_empty()}}
+{\footnotesize\ttfamily bool is\+\_\+moves\+\_\+list\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Checks if a moves list is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a pointer to the \doxylink{structMovesList}{Moves\+List} struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the list is empty, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{moves__list_8c_aa3785a3a4967120c616a214218610749}\label{moves__list_8c_aa3785a3a4967120c616a214218610749} 
+\index{moves\_list.c@{moves\_list.c}!print\_moves\_list@{print\_moves\_list}}
+\index{print\_moves\_list@{print\_moves\_list}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{print\_moves\_list()}{print\_moves\_list()}}
+{\footnotesize\ttfamily void print\+\_\+moves\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l }\end{DoxyParamCaption})}
+
+
+
+Prints the contents of a moves list. If the list is empty, the function prints a message on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a pointer to the \doxylink{structMovesList}{Moves\+List} struct. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{moves__list_8c_ad868b3eda3409bcec99150d8b5c743da}\label{moves__list_8c_ad868b3eda3409bcec99150d8b5c743da} 
+\index{moves\_list.c@{moves\_list.c}!push\_back\_move@{push\_back\_move}}
+\index{push\_back\_move@{push\_back\_move}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{push\_back\_move()}{push\_back\_move()}}
+{\footnotesize\ttfamily void push\+\_\+back\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Adds a game move to the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a pointer to the \doxylink{structMovesList}{Moves\+List} struct. \\
+\hline
+{\em m} & The game move to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{moves__list_8c_a4554cce03600ce028d002fb1c3f3d22a}\label{moves__list_8c_a4554cce03600ce028d002fb1c3f3d22a} 
+\index{moves\_list.c@{moves\_list.c}!push\_front\_move@{push\_front\_move}}
+\index{push\_front\_move@{push\_front\_move}!moves\_list.c@{moves\_list.c}}
+\doxysubsubsection{\texorpdfstring{push\_front\_move()}{push\_front\_move()}}
+{\footnotesize\ttfamily void push\+\_\+front\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{moves__list_8h_a28b746fa8ce9383c95904823ede81fdb}{PMoves\+List}} \texorpdfstring{$\ast$}{*}}]{l,  }\item[{\mbox{\hyperlink{game_8h_ac69b5b5a19260155cd7af52daeb3b28e}{Game\+Move}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Adds a game move to the front of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & A pointer to a pointer to the \doxylink{structMovesList}{Moves\+List} struct. \\
+\hline
+{\em m} & The game move to be added. \\
+\hline
+\end{DoxyParams}
